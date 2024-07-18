@@ -1,3 +1,4 @@
+module.exports.items = 
 [
     {
         "id": "1",

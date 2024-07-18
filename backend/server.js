@@ -3,17 +3,14 @@ var express = require('express');
 var app = express();
 app.use(express.json());
 var items = require('./public/items.js')
+var tables = require('./public/tables.js')
 
 app.get('/items/:id', (req, res) => {
   res.json(items.items[req.params.id-1]);
 })
 
-app.get('/recipes/:id', (req, res) => {
-  res.sendFile("./public/recipes/" + req.params.id + ".json");
-})
-
 app.get('/tables/:id', (req, res) => {
-  res.sendFile("./public/tables/" + req.params.id + ".json");
+  res.json(tables.tables[req.params.id-1]);
 })
 
 app.use((req, res, next) => {
