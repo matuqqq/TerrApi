@@ -1,31 +1,32 @@
 var fs = require('fs');
 var express = require('express');
 var app = express();
+app.use(express.json());
+var items = require('./public/items.js')
 
-
-app.get('/items/:id',(req,res) =>{
-res.sendFile("./public/items/"+ req.params.id +".json");
+app.get('/items/:id', (req, res) => {
+  res.json(items.items[req.params.id-1]);
 })
 
-app.get('/recipes/:id',(req,res) =>{
-    res.sendFile("./public/recipes/"+ req.params.id +".json");
-    })
+app.get('/recipes/:id', (req, res) => {
+  res.sendFile("./public/recipes/" + req.params.id + ".json");
+})
 
-app.get('/tables/:id',(req,res) =>{
-    res.sendFile("./public/tables/"+ req.params.id +".json");
-    })
+app.get('/tables/:id', (req, res) => {
+  res.sendFile("./public/tables/" + req.params.id + ".json");
+})
 
-app.use((req, res, next) =>{
+app.use((req, res, next) => {
   res.status(404);
   res.type('txt').send('Not found');
 });
 
 app.use((err, req, res, next) => {
-  if(err) {
+  if (err) {
     res.status(err.status || 500)
       .type('txt')
       .send(err.message || 'SERVER ERROR');
-  }  
+  }
 })
 
 
