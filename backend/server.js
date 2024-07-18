@@ -13,6 +13,14 @@ app.get('/tables/:id', (req, res) => {
   res.json(tables.tables[req.params.id-1]);
 })
 
+app.get('/items/', (req, res) => {
+  res.json(items.items);
+})
+
+app.get('/tables/', (req, res) => {
+  res.json(tables.tables);
+})
+
 app.use((req, res, next) => {
   res.status(404);
   res.type('txt').send('Not found');
