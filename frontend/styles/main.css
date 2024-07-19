@@ -14,52 +14,170 @@ body {
     overflow-x: hidden; /* Evitar desbordamiento horizontal */
 }
 
+button {
+    background: none;
+    padding: 0;
+    border: none;
+}
+
 @font-face {
     font-family: 'TerraFont';
-    src: url('../fonts/TERRAFONT.TTF') format('truetype'); /* TTF */
+    src: url('../fonts/TerraFont.ttf') format('truetype'); /* TTF */
+}
+@font-face {
+    font-family: 'TheBoldFont';
+    src: url('../fonts/TheBoldFont.ttf') format('truetype'); /* TTF */
 }
 
 /* ---------------------------------------------- header ---------------------------------------------- */
 
 header {
+    height: 8rem;
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    position: relative;
+    top: -1rem;
+    box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, .25);
+    background-color: rgb(245, 245, 245);
+    position: sticky; /* Cambiado de relative a sticky */
+    z-index: 100;
 }
 
-/* ---------------------------------------------- navbar ---------------------------------------------- */
+header.sticky {
+    height: 6rem;
+}
+
+.logo {
+    margin-inline: 1.5rem;
+    height: 100%;
+}
 
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    background-color: #333;
-    color: white;
-    padding: 1rem;
     display: flex;
-    justify-content: space-between;
-    z-index: 1000;
+    justify-content: space-around;
+    align-items: center;
+    position: inherit;
+    top: .75rem;
 }
 
-.navbar a {
+.navbar button {
+    width: 10rem;
+    border-radius: 100vmax;
+    background-color: #03E266;
+    padding: .5rem 2rem .5rem 2rem;
+    font: normal 600 1rem 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: .2s;
     color: white;
-    text-decoration: none;
-    margin: 0 1rem;
+}
+
+.navbar button:hover {
+    transform: scale(1.2);
+    background-color: #07b254;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5);
 }
 
 /* ---------------------------------------------- main ---------------------------------------------- */
 
 main {
-    padding: 4rem 1rem; /* Ajustar padding para evitar desbordamiento */
-    margin-top: 4rem; /* Espacio para la navbar fija */
+    padding: 1rem;
+}
+
+h1 {
+    padding: 0rem 1rem .5rem;
+    font: normal 800 5rem 'Montserrat', sans-serif;
+}
+
+.item-navbar {
+    background-color: white;
+    padding: 1rem;
+    margin: 0rem 2rem 1rem;
+    border-radius: 18px;
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, .25);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.item-navbar button {
+    height: 2.5rem;
+    border-radius: 100vmax;
+    background-color: #03E266;
+    padding: .5rem 1rem;
+    font: normal 600 1rem 'Montserrat', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 0 2rem -.5rem rgba(0, 0, 0, .25);
+    transition: .2s;
+    color: white;
+}
+
+.item-navbar button:hover {
+    transform: scale(1.2);
+    background-color: #07b254;
+    box-shadow: 0 0 3rem 0 rgba(0, 0, 0, .3);
+}
+
+.filter {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-type {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.filter-rarity {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+label {
+    margin: 0;
+    padding: 0;
+    border-radius: 100vmax;
+    background-color: #03E266;
+    padding: .5rem;
+    font: normal 600 1rem 'Montserrat', sans-serif;
+    cursor: pointer;
+    width: 9rem;
+    text-align: center;
+    white-space: nowrap;
+    box-shadow: 0 0 2rem -.5rem rgba(0, 0, 0, .5);
+    transition: .2s;
+}
+
+.item-navbar label:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .75);
+}
+
+.filter-type label {
+    color: white;
+}
+
+.filter-rarity label {
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+    font: normal 500 1rem 'TerraFont', sans-serif;
+}
+
+
+input[type="checkbox"] {
+    display: none;
 }
 
 .lista {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
-    padding-inline: 2rem; /* Reducir padding */
+    padding-inline: 2rem;
 }
 
 .img {
@@ -149,11 +267,11 @@ main {
     background-color: #DD81DD;
 }
 
-.table {
+.tables {
     height: 100%;
 }
 
-.table img {
+.tables img {
     display: flex;
     align-items: center;
     height: 100%;
@@ -174,7 +292,20 @@ main {
     overflow: hidden;
 }
 
-.table-item {
+.table-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.table-data, .table-item {
+    height: 1.7rem;
+}
+
+.table-item img{
     display: flex;
     align-items: center;
     height: 100%;
@@ -199,7 +330,7 @@ main {
 .orange { color: #DFAE82; }
 .light-red { color: #CB7878; }
 .pink { color: #DD81DD; }
-.light-purple{ color: #241B2B; }
+.light-purple{ color: #B227FD; }
 .lime { color: #5A990B; }
 .yellow { color: #F9F909; }
 .cyan { color: #024456; }
@@ -208,6 +339,23 @@ main {
 .rainbow { color: black; } /*Por investigar*/
 .master { color: black; } /*Por investigar*/
 .quest { color: #8C6104; }
+
+.r666 { background-color: #545455; } /* color de .gray */
+.r0 { background-color: #E3E3E4; } /* color de .white */
+.r1 { background-color: #5E5EA0; } /* color de .blue */
+.r2 { background-color: #3E673F; } /* color de .green */
+.r3 { background-color: #DFAE82; } /* color de .orange */
+.r4 { background-color: #CB7878; } /* color de .light-red */
+.r5 { background-color: #DD81DD; } /* color de .pink */
+.r6 { background-color: #B227FD; } /* color de .light-purple */
+.r7 { background-color: #5A990B; } /* color de .lime */
+.r8 { background-color: #F9F909; } /* color de .yellow */
+.r9 { background-color: #024456; } /* color de .cyan */
+.r10 { background-color: #C3073C; } /* color de .red */
+.r11 { background-color: #551379; } /* color de .purple */
+.r12 { background-color: black; } /* color de .rainbow */
+.r13 { background-color: black; } /* color de .master */
+.r14 { background-color: #8C6104; } /* color de .quest */
 
 .t1 { background-color: #615F7C; border-radius: 100vmax; }
 .t2 { background-color: #668AAC; border-radius: 100vmax; }

@@ -1,0 +1,13 @@
+falta completar el json de items
+
+tal vez usar tables completo
+
+hacer iteracion de gray y de master (rarity)
+
+arreglar el sticky
+
+y acomodar el h1
+
+obvio el js
+
+y los accesos de los botones (icono, mini-tables, y accesos-rapidos)

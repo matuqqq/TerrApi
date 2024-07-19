@@ -12,45 +12,18 @@
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li class="nav-item"><button class="">Ver Todo</button></li>
-                <li class="nav-item"><button class="">Items</button></li>
-                <li class="nav-item"><button class="">Tables</button></li>
-            </ul>
-        </nav>
 
-        <!--Items navbar-->
-        <nav>
-            <ul>
-                <li class="nav-item"><button class="">Ver Todo</button></li>
+        <!--Navbar-->
+        <img class="logo" src="https://logos-world.net/wp-content/uploads/2023/02/Terraria-Logo-2011.png"
+            alt="Terraria">
 
-                <!--Types: -->
-                <li class="nav-item"><button class="">Consumable</button></li>
-                <li class="nav-item"><button class="">Block</button></li>
-                <li class="nav-item"><button class="">Forniture</button></li>
-                <li class="nav-item"><button class="">Weapon</button></li>
-                <li class="nav-item"><button class="">Tool</button></li>
-                <li class="nav-item"><button class="">Equippable</button></li>
-                <li class="nav-item"><button class="">Ingredient</button></li>
+        <div class="navbar">
+            <button class="nav-btn">Items</button>
+            <button class="nav-btn">Tables</button>
+            <button class="nav-btn">Futher</button>
+        </div>
 
-                <!--Types: -->
-                <li class="nav-item"><button class="">0</button></li>
-                <li class="nav-item"><button class="">1</button></li>
-                <li class="nav-item"><button class="">2</button></li>
-                <li class="nav-item"><button class="">3</button></li>
-                <li class="nav-item"><button class="">4</button></li>
-                <li class="nav-item"><button class="">5</button></li>
-                <li class="nav-item"><button class="">6</button></li>
-                <li class="nav-item"><button class="">7</button></li>
-                <li class="nav-item"><button class="">8</button></li>
-                <li class="nav-item"><button class="">9</button></li>
-                <li class="nav-item"><button class="">10</button></li>
-                <li class="nav-item"><button class="">11</button></li>
-                <li class="nav-item"><button class="">12</button></li>
-                <li class="nav-item"><button class="">13</button></li>
-            </ul>
-        </nav>
+
     </header>
 
     <main>
@@ -58,6 +31,41 @@
         <!-- Lista items -->
 
         <h1>Items: </h1>
+
+        <div class="item-navbar">
+            <button id="view-all">View All</button>
+
+            <div class="filter">
+                <div class="filter-type">
+                    <label class="consumable"><input type="checkbox" id="consumable"> CONSUMABLE</label>
+                    <label class="block" ><input type="checkbox" id="block"> BLOCK</label>
+                    <label class="furniture"><input type="checkbox" id="furniture"> FURNITURE</label>
+                    <label class="weapon"><input type="checkbox" id="weapon"> WEAPON</label>
+                    <label class="tool"><input type="checkbox" id="tool"> TOOL</label>
+                    <label class="equippable"><input type="checkbox" id="equippable"> EQUIPPABLE</label>
+                    <label class="ingredient"><input type="checkbox" id="ingredient"> INGREDIENT</label>
+                </div>
+
+                <div class="filter-rarity">
+                    <label class="r666 gray"><input type="checkbox" id="666"> Gray</label>
+                    <label class="r0 white"><input type="checkbox" id="0"> White</label>
+                    <label class="r1 blue"><input type="checkbox" id="1"> Blue</label>
+                    <label class="r2 green"><input type="checkbox" id="2"> Green</label>
+                    <label class="r3 orange"><input type="checkbox" id="3"> Orange</label>
+                    <label class="r4 light-red"><input type="checkbox" id="4"> Light Red</label>
+                    <label class="r5 pink"><input type="checkbox" id="5"> Pink</label>
+                    <label class="r6 light-purple"><input type="checkbox" id="6"> Light Purple</label>
+                    <label class="r7 lime"><input type="checkbox" id="7"> Lime</label>
+                    <label class="r8 yellow"><input type="checkbox" id="8"> Yellow</label>
+                    <label class="r9 cyan"><input type="checkbox" id="9"> Cyan</label>
+                    <label class="r10 red"><input type="checkbox" id="10"> Red</label>
+                    <label class="r11 purple"><input type="checkbox" id="11"> Purple</label>
+                    <label class="r12 rainbow"><input type="checkbox" id="12"> Rainbow</label>
+                    <label class="r13 master"><input type="checkbox" id="13"> Master</label>
+                    <label class="r14 quest"><input type="checkbox" id="14"> Quest</label>
+                </div>
+            </div>
+        </div>
 
         <div class="lista" id="listaItems">
             <div class="item">
@@ -78,7 +86,7 @@
                         <div class="rarity pink">
                             <p>pink</p>
                         </div>
-                        <div class="table t26"><img
+                        <div class="tables t26"><img
                                 src="https://static.wikia.nocookie.net/terraria_gamepedia/images/3/3d/Mythril_Anvil.png"
                                 alt="Mythril Anvil"></div>
                     </div>
@@ -99,10 +107,10 @@
                         <div class="type tool">
                             <p>WEAPON</p>
                         </div>
-                        <div class="rarity">
-                            <p>5</p>
+                        <div class="rarity pink">
+                            <p>Pink</p>
                         </div>
-                        <div class="table t26"><img
+                        <div class="tables t26"><img
                                 src="https://static.wikia.nocookie.net/terraria_gamepedia/images/3/3d/Mythril_Anvil.png"
                                 alt="Mythril Anvil"></div>
                     </div>
@@ -126,7 +134,7 @@
                         <div class="rarity">
                             <p>5</p>
                         </div>
-                        <div class="table t26"><img
+                        <div class="tables t26"><img
                                 src="https://static.wikia.nocookie.net/terraria_gamepedia/images/3/3d/Mythril_Anvil.png"
                                 alt="Mythril Anvil"></div>
                     </div>
@@ -150,7 +158,7 @@
                         <div class="rarity">
                             <p>5</p>
                         </div>
-                        <div class="table t26"><img
+                        <div class="tables t26"><img
                                 src="https://static.wikia.nocookie.net/terraria_gamepedia/images/3/3d/Mythril_Anvil.png"
                                 alt="Mythril Anvil"></div>
                     </div>
@@ -174,7 +182,7 @@
                         <div class="rarity">
                             <p>5</p>
                         </div>
-                        <div class="table t26"><img
+                        <div class="tables t26"><img
                                 src="https://static.wikia.nocookie.net/terraria_gamepedia/images/3/3d/Mythril_Anvil.png"
                                 alt="Mythril Anvil"></div>
                     </div>
@@ -198,7 +206,7 @@
                         <div class="rarity">
                             <p>5</p>
                         </div>
-                        <div class="table t26"><img
+                        <div class="tables t26"><img
                                 src="https://static.wikia.nocookie.net/terraria_gamepedia/images/3/3d/Mythril_Anvil.png"
                                 alt="Mythril Anvil"></div>
                     </div>
@@ -214,15 +222,20 @@
             <div class="table">
                 <p class="id-back">#01</p>
                 <div class="img">
-                    <img src="https://static.wikia.nocookie.net/terraria_gamepedia/images/c/c6/Titanium_Forge.png" alt="Titanium Forge">
+                    <img src="https://static.wikia.nocookie.net/terraria_gamepedia/images/c/c6/Titanium_Forge.png"
+                        alt="Titanium Forge">
                 </div>
-                <div class="table-info">
+                <div class="table-text">
                     <div class="title">
-                        <p class="title-id">#533</p>
-                        <h2 class="title-name">Megashark</h2>
+                        <p class="title-id">#01</p>
+                        <h2 class="title-name">Titanium Forge</h2>
                     </div>
-                    <div class="table-item t26"><img src="https://static.wikia.nocookie.net/terraria_gamepedia/images/3/3d/Mythril_Anvil.png" alt="Mythril Anvil"></div>
-            </div>
+                    <div class="table-data">
+                        <div class="table-item t1"><img
+                                src="https://static.wikia.nocookie.net/terraria_gamepedia/images/c/c6/Titanium_Forge.png"
+                                alt="Mythril Anvil"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
