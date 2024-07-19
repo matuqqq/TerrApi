@@ -1,0 +1,245 @@
+/* ---------------------------------------------- basico ---------------------------------------------- */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(245, 245, 245);
+    font: normal 500 1rem 'Montserrat', sans-serif;
+    overflow-x: hidden; /* Evitar desbordamiento horizontal */
+}
+
+@font-face {
+    font-family: 'TerraFont';
+    src: url('../fonts/TERRAFONT.TTF') format('truetype'); /* TTF */
+}
+
+/* ---------------------------------------------- header ---------------------------------------------- */
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* ---------------------------------------------- navbar ---------------------------------------------- */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+/* ---------------------------------------------- main ---------------------------------------------- */
+
+main {
+    padding: 4rem 1rem; /* Ajustar padding para evitar desbordamiento */
+    margin-top: 4rem; /* Espacio para la navbar fija */
+}
+
+.lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding-inline: 2rem; /* Reducir padding */
+}
+
+.img {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.img img {
+    width: 100%;
+    max-width: 12rem;
+}
+
+.id-back {
+    position: absolute;
+    top: -0.75rem;
+    left: 50%; transform: translateX(-50%);
+    font: normal 800 8.5rem 'Montserrat', sans-serif; color: rgb(220, 220, 220);
+    z-index: -1;
+}
+
+.item-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.title-id {
+    background-color: rgb(220, 220, 220);
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+    font: normal 500 1rem 'Montserrat', sans-serif;
+}
+
+.title-name {
+    font: normal 800 1.75rem 'Montserrat', sans-serif;
+}
+
+/* ---------------------------------------------- items ---------------------------------------------- */
+
+.item {
+    border-radius: 1rem;
+    background-color: white;
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, .25);
+    padding-block: 1rem;
+    text-transform: uppercase;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.item-data {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    height: 1.7rem;
+}
+
+.type {
+    gap: .5rem;
+    font: normal 500 0.9rem 'Montserrat', sans-serif; color: white;
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+}
+
+.rarity p {
+    font: normal 500 1rem 'TerraFont', sans-serif;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+    gap: .5rem;
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+    background-color: #DD81DD;
+}
+
+.table {
+    height: 100%;
+}
+
+.table img {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: .5rem;
+    padding: .25rem .5rem;
+}
+
+/* ---------------------------------------------- tables ---------------------------------------------- */
+
+.table {
+    border-radius: 1rem;
+    background-color: white;
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, .25);
+    padding-block: 1rem;
+    text-transform: uppercase;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.table-item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: .5rem;
+    padding: .25rem .5rem;
+}
+
+/* ---------------------------------------------- colors ---------------------------------------------- */
+
+.weapon { background-color: rgb(61, 119, 253);}
+.consumable { background-color: rgb(234, 51, 30); }
+.block { background-color: rgb(113, 79, 28); }
+.furniture { background-color: rgb(211, 26, 131);}
+.tool { background-color: rgb(33, 170, 40);}
+.equippable { background-color: rgb(243, 236, 25); color: black;}
+.ingredient { background-color: rgb(141, 33, 219); }
+
+.gray { color: #545455; }
+.white { color: #E3E3E4; }
+.blue { color: #5E5EA0; }
+.green { color: #3E673F; }
+.orange { color: #DFAE82; }
+.light-red { color: #CB7878; }
+.pink { color: #DD81DD; }
+.light-purple{ color: #241B2B; }
+.lime { color: #5A990B; }
+.yellow { color: #F9F909; }
+.cyan { color: #024456; }
+.red { color: #C3073C; }
+.purple { color: #551379; }
+.rainbow { color: black; } /*Por investigar*/
+.master { color: black; } /*Por investigar*/
+.quest { color: #8C6104; }
+
+.t1 { background-color: #615F7C; border-radius: 100vmax; }
+.t2 { background-color: #668AAC; border-radius: 100vmax; }
+.t3 { background-color: #6A4702; border-radius: 100vmax; }
+.t4 { background-color: #A1ACAD; border-radius: 100vmax; }
+.t5 { background-color: #C5B7A6; border-radius: 100vmax; }
+.t6 { background-color: #AA805D; border-radius: 100vmax; }
+.t7 { background-color: #7786A0; border-radius: 100vmax; }
+.t8 { background-color: #8A684B; border-radius: 100vmax; }
+.t9 { background-color: #81A5FF; border-radius: 100vmax; }
+.t10 { background-color: #A5282C; border-radius: 100vmax; }
+.t11 { background-color: #676767; border-radius: 100vmax; }
+.t12 { background-color: #E8F068; border-radius: 100vmax; }
+.t13 { background-color: #7F7F7F; border-radius: 100vmax; }
+.t14 { background-color: #FDDC03; border-radius: 100vmax; }
+.t15 { background-color: #976B4B; border-radius: 100vmax; }
+.t16 { background-color: #BF8A78; border-radius: 100vmax; }
+.t17 { background-color: #FEF625; border-radius: 100vmax; }
+.t18 { background-color: #7CE9F7; border-radius: 100vmax; }
+.t19 { background-color: #C6C4AA; border-radius: 100vmax; }
+.t20 { background-color: #AEA79D; border-radius: 100vmax; }
+.t21 { background-color: #A87858; border-radius: 100vmax; }
+.t22 { background-color: #D68D15; border-radius: 100vmax; }
+.t23 { background-color: #876848; border-radius: 100vmax; }
+.t24 { background-color: #AE8265; border-radius: 100vmax; }
+.t25 { background-color: #AE8265; border-radius: 100vmax; }
+.t26 { background-color: #76BA8A; border-radius: 100vmax; }
+.t27 { background-color: #A97D5D; border-radius: 100vmax; }
+.t28 { background-color: #00BCCF; border-radius: 100vmax; }
+.t29 { background-color: #BBE6EF; border-radius: 100vmax; }
+.t30 { background-color: #C9BCAA; border-radius: 100vmax; }
+.t31 { background-color: #D0F2F8; border-radius: 100vmax; }
+.t32 { background-color: #A2785C; border-radius: 100vmax; }
+.t33 { background-color: #9D7459; border-radius: 100vmax; }
+.t34 { background-color: #9E7559; border-radius: 100vmax; }
