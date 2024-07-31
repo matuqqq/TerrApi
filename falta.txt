@@ -1,13 +1,89 @@
+<!-------------------------------------------------------------- Basico --------------------------------------------------------------->
+
 falta completar el json de items
-
-tal vez usar tables completo
-
 hacer iteracion de gray y de master (rarity)
+y los accesos de los botones (icono, mini-tables y filtros)
 
-arreglar el sticky
+<!-------------------------------------------------------------- Search --------------------------------------------------------------->
 
-y acomodar el h1
+<div id="app">
+    <input type="text" id="searchInput" placeholder="Buscar Pokémon..." />
+    <div id="resultsContainer"></div>
+</div>
 
-obvio el js
+#app {
+    position: absolute;
+    max-width: 800px;
+    margin: 0;
+    padding: 20px;
+}
 
-y los accesos de los botones (icono, mini-tables, y accesos-rapidos)
+<!-------------------------------------------------------------- Filter --------------------------------------------------------------->
+
+// botonesHeader.forEach(btn => btn.addEventListener("click", (event) => {
+//     const btnId = event.currentTarget.id;
+
+//     for (let i = 1; i < 545; i++) {
+//         fetch(`${url}/items/${i}`)
+//             .then((response) => { response.json())
+//             .then(data => {
+//                 const types = data.type;
+//                 if (types.some(tipo => tipo.includes(btnId))){
+//                     viewItems(data);
+//                 }
+//             })
+//     }
+// }));
+
+// // Event listener para la búsqueda de Pokémon
+// searchInputPokemon.addEventListener('keyup', (event) => {
+//     const term = event.target.value.trim().toLowerCase();
+//     console.log(term); // Puedes eliminar esto una vez que esté funcionando correctamente
+// });
+
+
+<!-------------------------------------------------------------- Cards --------------------------------------------------------------->
+
+<!-- <div class="table">
+                <p class="id-back">#01</p>
+                <div class="img">
+                    <img src="https://static.wikia.nocookie.net/terraria_gamepedia/images/c/c6/Titanium_Forge.png"
+                        alt="Titanium Forge">
+                </div>
+                <div class="table-text">
+                    <div class="title">
+                        <p class="title-id">#01</p>
+                        <h2 class="title-name">Titanium Forge</h2>
+                    </div>
+                    <div class="table-data">
+                        <div class="table-item t1"><img
+                                src="https://static.wikia.nocookie.net/terraria_gamepedia/images/c/c6/Titanium_Forge.png"
+                                alt="Mythril Anvil"></div>
+                    </div>
+                </div>
+            </div> -->
+
+<!-- <div class="item">
+                <p class="id-back">#533</p>
+                <div class="img">
+                    <img src="https://static.wikia.nocookie.net/terraria_gamepedia/images/3/36/Megashark.png"
+                        alt="Megashark">
+                </div>
+                <div class="item-text">
+                    <div class="title">
+                        <p class="title-id">#533</p>
+                        <h2 class="title-name">Megashark</h2>
+                    </div>
+                    <div class="item-data">
+                        <div class="type weapon">
+                            <p>WEAPON</p>
+                        </div>
+                        <div class="rarity pink">
+                            <p>pink</p>
+                        </div>
+                        <div class="tables t26"><img
+                                src="https://static.wikia.nocookie.net/terraria_gamepedia/images/3/3d/Mythril_Anvil.png"
+                                alt="Mythril Anvil"></div>
+                    </div>
+                </div>
+            </div> -->

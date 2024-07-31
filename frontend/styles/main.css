@@ -34,12 +34,15 @@ button {
 header {
     height: 8rem;
     display: flex;
-    position: relative;
-    top: -1rem;
-    box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, .25);
+    position: fixed; /* Cambiado a fixed para fijar el header en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: rgb(245, 245, 245);
-    position: sticky; /* Cambiado de relative a sticky */
+    box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, .25);
     z-index: 100;
+    padding: 1rem; /* Añadido padding para contenido interno */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total */
 }
 
 header.sticky {
@@ -56,15 +59,13 @@ header.sticky {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: inherit;
-    top: .75rem;
 }
 
 .navbar button {
     width: 10rem;
     border-radius: 100vmax;
     background-color: #03E266;
-    padding: .5rem 2rem .5rem 2rem;
+    padding: .5rem 2rem;
     font: normal 600 1rem 'Montserrat', sans-serif;
     cursor: pointer;
     transition: .2s;
@@ -81,12 +82,15 @@ header.sticky {
 
 main {
     padding: 1rem;
+    margin-top: 8rem; /* Ajusta según la altura del header */
 }
 
 h1 {
-    padding: 0rem 1rem .5rem;
+    padding: 0rem 2rem .5rem;
     font: normal 800 5rem 'Montserrat', sans-serif;
 }
+
+.h1 { padding-top: 4rem }
 
 .item-navbar {
     background-color: white;
@@ -187,8 +191,8 @@ input[type="checkbox"] {
 }
 
 .img img {
-    width: 100%;
-    max-width: 12rem;
+    height: 100%;
+    max-height: 5rem;
 }
 
 .id-back {
@@ -264,8 +268,9 @@ input[type="checkbox"] {
     gap: .5rem;
     padding: .25rem .5rem;
     border-radius: 100vmax;
-    background-color: #DD81DD;
 }
+
+.rarity { border-radius: 100vmax; }
 
 .tables {
     height: 100%;
@@ -359,35 +364,39 @@ input[type="checkbox"] {
 
 .t1 { background-color: #615F7C; border-radius: 100vmax; }
 .t2 { background-color: #668AAC; border-radius: 100vmax; }
-.t3 { background-color: #6A4702; border-radius: 100vmax; }
+.t3 { background-color: #939BBC; border-radius: 100vmax; }
 .t4 { background-color: #A1ACAD; border-radius: 100vmax; }
 .t5 { background-color: #C5B7A6; border-radius: 100vmax; }
 .t6 { background-color: #AA805D; border-radius: 100vmax; }
 .t7 { background-color: #7786A0; border-radius: 100vmax; }
-.t8 { background-color: #8A684B; border-radius: 100vmax; }
-.t9 { background-color: #81A5FF; border-radius: 100vmax; }
-.t10 { background-color: #A5282C; border-radius: 100vmax; }
-.t11 { background-color: #676767; border-radius: 100vmax; }
-.t12 { background-color: #E8F068; border-radius: 100vmax; }
-.t13 { background-color: #7F7F7F; border-radius: 100vmax; }
-.t14 { background-color: #FDDC03; border-radius: 100vmax; }
-.t15 { background-color: #976B4B; border-radius: 100vmax; }
-.t16 { background-color: #BF8A78; border-radius: 100vmax; }
-.t17 { background-color: #FEF625; border-radius: 100vmax; }
-.t18 { background-color: #7CE9F7; border-radius: 100vmax; }
-.t19 { background-color: #C6C4AA; border-radius: 100vmax; }
-.t20 { background-color: #AEA79D; border-radius: 100vmax; }
-.t21 { background-color: #A87858; border-radius: 100vmax; }
-.t22 { background-color: #D68D15; border-radius: 100vmax; }
-.t23 { background-color: #876848; border-radius: 100vmax; }
-.t24 { background-color: #AE8265; border-radius: 100vmax; }
-.t25 { background-color: #AE8265; border-radius: 100vmax; }
-.t26 { background-color: #76BA8A; border-radius: 100vmax; }
-.t27 { background-color: #A97D5D; border-radius: 100vmax; }
-.t28 { background-color: #00BCCF; border-radius: 100vmax; }
-.t29 { background-color: #BBE6EF; border-radius: 100vmax; }
-.t30 { background-color: #C9BCAA; border-radius: 100vmax; }
-.t31 { background-color: #D0F2F8; border-radius: 100vmax; }
-.t32 { background-color: #A2785C; border-radius: 100vmax; }
-.t33 { background-color: #9D7459; border-radius: 100vmax; }
-.t34 { background-color: #9E7559; border-radius: 100vmax; }
+.t8 { background-color: #FE9202; border-radius: 100vmax; }
+.t9 { background-color: #8A684B; border-radius: 100vmax; }
+.t10 { background-color: #81A5FF; border-radius: 100vmax; }
+.t11 { background-color: #A5282C; border-radius: 100vmax; }
+.t12 { background-color: #676767; border-radius: 100vmax; }
+.t13 { background-color: #E8F068; border-radius: 100vmax; }
+.t14 { background-color: #7F7F7F; border-radius: 100vmax; }
+.t15 { background-color: #FDDC03; border-radius: 100vmax; }
+.t16 { background-color: #976B4B; border-radius: 100vmax; }
+.t17 { background-color: #BF8A78; border-radius: 100vmax; }
+.t18 { background-color: #FEF625; border-radius: 100vmax; }
+.t19 { background-color: #FEF625; border-radius: 100vmax; }
+.t20 { background-color: #7CE9F7; border-radius: 100vmax; }
+.t21 { background-color: #C6C4AA; border-radius: 100vmax; }
+.t22 { background-color: #AEA79D; border-radius: 100vmax; }
+.t23 { background-color: #A87858; border-radius: 100vmax; }
+.t24 { background-color: #D68D15; border-radius: 100vmax; }
+.t25 { background-color: #876848; border-radius: 100vmax; }
+.t26 { background-color: #AE8265; border-radius: 100vmax; }
+.t27 { background-color: #AE8265; border-radius: 100vmax; }
+.t28 { background-color: #A2785C; border-radius: 100vmax; }
+.t29 { background-color: #76BA8A; border-radius: 100vmax; }
+.t30 { background-color: #A97D5D; border-radius: 100vmax; }
+.t31 { background-color: #00BCCF; border-radius: 100vmax; }
+.t32 { background-color: #BBE6EF; border-radius: 100vmax; }
+.t33 { background-color: #C9BCAA; border-radius: 100vmax; }
+.t34 { background-color: #D0F2F8; border-radius: 100vmax; }
+.t35 { background-color: #A2785C; border-radius: 100vmax; }
+.t36 { background-color: #9D7459; border-radius: 100vmax; }
+.t37 { background-color: #9E7559; border-radius: 100vmax; }
+.t38 { background-color: #9E7459; border-radius: 100vmax; }

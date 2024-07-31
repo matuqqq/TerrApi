@@ -18,9 +18,9 @@
             alt="Terraria">
 
         <div class="navbar">
-            <button class="nav-btn">Items</button>
-            <button class="nav-btn">Tables</button>
-            <button class="nav-btn">Futher</button>
+            <button class="nav-btn" onclick="scrollToSection('items-section')" >Items</button>
+            <button class="nav-btn" onclick="scrollToSection('tables-section')" >Tables</button>
+            <button class="nav-btn" onclick="scrollToSection('futher-section')" >Futher</button>
         </div>
 
 
@@ -29,16 +29,14 @@
     <main>
 
         <!-- Lista items -->
-
-        <h1>Items: </h1>
-
+        <h1 id="items-section" >Items: </h1>
         <div class="item-navbar">
             <button id="view-all">View All</button>
 
             <div class="filter">
                 <div class="filter-type">
                     <label class="consumable"><input type="checkbox" id="consumable"> CONSUMABLE</label>
-                    <label class="block" ><input type="checkbox" id="block"> BLOCK</label>
+                    <label class="block"><input type="checkbox" id="block"> BLOCK</label>
                     <label class="furniture"><input type="checkbox" id="furniture"> FURNITURE</label>
                     <label class="weapon"><input type="checkbox" id="weapon"> WEAPON</label>
                     <label class="tool"><input type="checkbox" id="tool"> TOOL</label>
@@ -66,181 +64,18 @@
                 </div>
             </div>
         </div>
-
-        <div class="lista" id="listaItems">
-            <div class="item">
-                <p class="id-back">#533</p>
-                <div class="img">
-                    <img src="https://static.wikia.nocookie.net/terraria_gamepedia/images/3/36/Megashark.png"
-                        alt="Megashark">
-                </div>
-                <div class="item-text">
-                    <div class="title">
-                        <p class="title-id">#533</p>
-                        <h2 class="title-name">Megashark</h2>
-                    </div>
-                    <div class="item-data">
-                        <div class="type weapon">
-                            <p>WEAPON</p>
-                        </div>
-                        <div class="rarity pink">
-                            <p>pink</p>
-                        </div>
-                        <div class="tables t26"><img
-                                src="https://static.wikia.nocookie.net/terraria_gamepedia/images/3/3d/Mythril_Anvil.png"
-                                alt="Mythril Anvil"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <p class="id-back">#533</p>
-                <div class="img">
-                    <img src="https://static.wikia.nocookie.net/terraria_gamepedia/images/3/36/Megashark.png"
-                        alt="Megashark">
-                </div>
-                <div class="item-text">
-                    <div class="title">
-                        <p class="title-id">#533</p>
-                        <h2 class="title-name">Megashark</h2>
-                    </div>
-                    <div class="item-data">
-                        <div class="type tool">
-                            <p>WEAPON</p>
-                        </div>
-                        <div class="rarity pink">
-                            <p>Pink</p>
-                        </div>
-                        <div class="tables t26"><img
-                                src="https://static.wikia.nocookie.net/terraria_gamepedia/images/3/3d/Mythril_Anvil.png"
-                                alt="Mythril Anvil"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <p class="id-back">#533</p>
-                <div class="img">
-                    <img src="https://static.wikia.nocookie.net/terraria_gamepedia/images/3/36/Megashark.png"
-                        alt="Megashark">
-                </div>
-                <div class="item-text">
-                    <div class="title">
-                        <p class="title-id">#533</p>
-                        <h2 class="title-name">Megashark</h2>
-                    </div>
-                    <div class="item-data">
-                        <div class="type consumable">
-                            <p>WEAPON</p>
-                        </div>
-                        <div class="rarity">
-                            <p>5</p>
-                        </div>
-                        <div class="tables t26"><img
-                                src="https://static.wikia.nocookie.net/terraria_gamepedia/images/3/3d/Mythril_Anvil.png"
-                                alt="Mythril Anvil"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <p class="id-back">#533</p>
-                <div class="img">
-                    <img src="https://static.wikia.nocookie.net/terraria_gamepedia/images/3/36/Megashark.png"
-                        alt="Megashark">
-                </div>
-                <div class="item-text">
-                    <div class="title">
-                        <p class="title-id">#533</p>
-                        <h2 class="title-name">Megashark</h2>
-                    </div>
-                    <div class="item-data">
-                        <div class="type consumable">
-                            <p>WEAPON</p>
-                        </div>
-                        <div class="rarity">
-                            <p>5</p>
-                        </div>
-                        <div class="tables t26"><img
-                                src="https://static.wikia.nocookie.net/terraria_gamepedia/images/3/3d/Mythril_Anvil.png"
-                                alt="Mythril Anvil"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <p class="id-back">#533</p>
-                <div class="img">
-                    <img src="https://static.wikia.nocookie.net/terraria_gamepedia/images/3/36/Megashark.png"
-                        alt="Megashark">
-                </div>
-                <div class="item-text">
-                    <div class="title">
-                        <p class="title-id">#533</p>
-                        <h2 class="title-name">Megashark</h2>
-                    </div>
-                    <div class="item-data">
-                        <div class="type consumable">
-                            <p>WEAPON</p>
-                        </div>
-                        <div class="rarity">
-                            <p>5</p>
-                        </div>
-                        <div class="tables t26"><img
-                                src="https://static.wikia.nocookie.net/terraria_gamepedia/images/3/3d/Mythril_Anvil.png"
-                                alt="Mythril Anvil"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <p class="id-back">#533</p>
-                <div class="img">
-                    <img src="https://static.wikia.nocookie.net/terraria_gamepedia/images/3/36/Megashark.png"
-                        alt="Megashark">
-                </div>
-                <div class="item-text">
-                    <div class="title">
-                        <p class="title-id">#533</p>
-                        <h2 class="title-name">Megashark</h2>
-                    </div>
-                    <div class="item-data">
-                        <div class="type consumable">
-                            <p>WEAPON</p>
-                        </div>
-                        <div class="rarity">
-                            <p>5</p>
-                        </div>
-                        <div class="tables t26"><img
-                                src="https://static.wikia.nocookie.net/terraria_gamepedia/images/3/3d/Mythril_Anvil.png"
-                                alt="Mythril Anvil"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="lista" id="listItems"></div>
 
         <!-- Lista tables -->
 
-        <h1>Tables: </h1>
-
-        <div class="lista" id="listaTables">
-            <div class="table">
-                <p class="id-back">#01</p>
-                <div class="img">
-                    <img src="https://static.wikia.nocookie.net/terraria_gamepedia/images/c/c6/Titanium_Forge.png"
-                        alt="Titanium Forge">
-                </div>
-                <div class="table-text">
-                    <div class="title">
-                        <p class="title-id">#01</p>
-                        <h2 class="title-name">Titanium Forge</h2>
-                    </div>
-                    <div class="table-data">
-                        <div class="table-item t1"><img
-                                src="https://static.wikia.nocookie.net/terraria_gamepedia/images/c/c6/Titanium_Forge.png"
-                                alt="Mythril Anvil"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h1 class="h1" id="tables-section" >Tables: </h1>
+        <div class="lista" id="listTables"></div>
     </main>
+    <futher>
+        <h1 id="futher-section" >Data nuestra *corazoncito*</h1>
+    </futher>
 
     <script src="scripts/main.js"></script>
-</body>
 
+</body>
 </html>
