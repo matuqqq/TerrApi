@@ -83,19 +83,23 @@ header.sticky {
 main {
     padding: 1rem;
     margin-top: 8rem; /* Ajusta según la altura del header */
+    background-color: #cacaca;
 }
 
 h1 {
     padding: 0rem 2rem .5rem;
     font: normal 800 5rem 'Montserrat', sans-serif;
+    margin: 2rem 0 0 0;
 }
 
-.h1 { padding-top: 4rem }
+.h1 { 
+    margin: 5rem 0;
+}
 
 .item-navbar {
     background-color: white;
     padding: 1rem;
-    margin: 0rem 2rem 1rem;
+    margin: 2rem 2rem 5rem;
     border-radius: 18px;
     box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, .25);
     display: flex;
@@ -199,7 +203,7 @@ input[type="checkbox"] {
     position: absolute;
     top: -0.75rem;
     left: 50%; transform: translateX(-50%);
-    font: normal 800 8.5rem 'Montserrat', sans-serif; color: rgb(220, 220, 220);
+    font: normal 800 8.5rem 'Montserrat', sans-serif; color: rgb(185, 185, 185);
     z-index: -1;
 }
 
@@ -236,7 +240,7 @@ input[type="checkbox"] {
 .item {
     border-radius: 1rem;
     background-color: white;
-    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, .25);
+    box-shadow: 0 0 2rem 1rem rgba(0, 0, 0, .15);
     padding-block: 1rem;
     text-transform: uppercase;
     position: relative;
